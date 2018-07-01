@@ -21,6 +21,7 @@
 		DBF1C35A20E908BE003FAFE4 /* NetworkerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C35920E908BE003FAFE4 /* NetworkerRequest.swift */; };
 		DBF1C35F20E908F5003FAFE4 /* NetworkerRequest+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C35E20E908F5003FAFE4 /* NetworkerRequest+Alamofire.swift */; };
 		DBF1C36220E909C4003FAFE4 /* DeezerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C36120E909C4003FAFE4 /* DeezerAPI.swift */; };
+		DBF1C36420E90A45003FAFE4 /* PlaylistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C36320E90A45003FAFE4 /* PlaylistModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		DBF1C35920E908BE003FAFE4 /* NetworkerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkerRequest.swift; sourceTree = "<group>"; };
 		DBF1C35E20E908F5003FAFE4 /* NetworkerRequest+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkerRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		DBF1C36120E909C4003FAFE4 /* DeezerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerAPI.swift; sourceTree = "<group>"; };
+		DBF1C36320E90A45003FAFE4 /* PlaylistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistModel.swift; sourceTree = "<group>"; };
 		FCE51C3DC3823B5A4C55099F /* Pods_DeezerSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeezerSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -267,6 +269,7 @@
 		DBF1C35420E906E5003FAFE4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DBF1C36320E90A45003FAFE4 /* PlaylistModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 			files = (
 				DBF1C31E20E905FC003FAFE4 /* ViewController.swift in Sources */,
 				DBF1C31C20E905FC003FAFE4 /* AppDelegate.swift in Sources */,
+				DBF1C36420E90A45003FAFE4 /* PlaylistModel.swift in Sources */,
 				DBF1C35720E9089C003FAFE4 /* Networker.swift in Sources */,
 				DBF1C36220E909C4003FAFE4 /* DeezerAPI.swift in Sources */,
 				DBF1C35F20E908F5003FAFE4 /* NetworkerRequest+Alamofire.swift in Sources */,
