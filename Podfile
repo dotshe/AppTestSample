@@ -6,7 +6,10 @@ target 'DeezerSample' do
   use_frameworks!
 
   # Pods for DeezerSample
-
+  pod 'Alamofire'
+  pod 'AlamofireImage', '~> 3.3'
+  pod 'RxSwift',    '~> 4.0'
+  
   target 'DeezerSampleTests' do
     inherit! :search_paths
     # Pods for testing
