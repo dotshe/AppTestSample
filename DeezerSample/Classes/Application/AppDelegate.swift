@@ -16,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    
+    let playlistsRepository: PlaylistRepository = PlaylistRepository()
+    let playlistsViewModel: PlaylistsViewModel = PlaylistsViewModel(withPlaylistsRepository: playlistsRepository)
+    let playlistsViewController: PlaylistsViewController = PlaylistsViewController()
+    playlistsViewController.playlistsViewModel = playlistsViewModel
+    
+    let navigationController = UINavigationController(rootViewController: playlistsViewController)
+    navigationController.setNavigationBarHidden(true, animated: false)
+    
+    self.window = UIWindow(frame: UIScreen.main.bounds)
+    window?.rootViewController = navigationController
+    window?.makeKeyAndVisible()
+    
     return true
   }
 

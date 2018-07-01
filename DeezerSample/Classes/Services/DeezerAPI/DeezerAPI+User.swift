@@ -58,7 +58,6 @@ extension DeezerAPI {
     if let jsonPlaylists = json["data"] as? [[String: Any]] {
       for jsonPlaylist in jsonPlaylists {
         if let playlist = DeezerPlaylistModel(json: jsonPlaylist) {
-          print(playlist)
           playlists.append(playlist)
         }
       }
