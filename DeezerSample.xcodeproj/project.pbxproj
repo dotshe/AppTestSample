@@ -127,6 +127,7 @@
 			children = (
 				DBF1C35220E90694003FAFE4 /* Application */,
 				DBF1C35320E90694003FAFE4 /* Repositories */,
+				DBF1C35420E906E5003FAFE4 /* Model */,
 				DBF1C35020E90693003FAFE4 /* Scene */,
 				DBF1C34F20E90693003FAFE4 /* Services */,
 				DBF1C35120E90693003FAFE4 /* Utils */,
@@ -211,6 +212,13 @@
 			children = (
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		DBF1C35420E906E5003FAFE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
