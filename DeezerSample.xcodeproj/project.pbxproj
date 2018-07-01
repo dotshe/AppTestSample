@@ -17,6 +17,9 @@
 		DBF1C32620E905FD003FAFE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF1C32420E905FD003FAFE4 /* LaunchScreen.storyboard */; };
 		DBF1C33120E905FD003FAFE4 /* DeezerSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C33020E905FD003FAFE4 /* DeezerSampleTests.swift */; };
 		DBF1C33C20E905FD003FAFE4 /* DeezerSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C33B20E905FD003FAFE4 /* DeezerSampleUITests.swift */; };
+		DBF1C35720E9089C003FAFE4 /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C35620E9089C003FAFE4 /* Networker.swift */; };
+		DBF1C35A20E908BE003FAFE4 /* NetworkerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C35920E908BE003FAFE4 /* NetworkerRequest.swift */; };
+		DBF1C35F20E908F5003FAFE4 /* NetworkerRequest+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C35E20E908F5003FAFE4 /* NetworkerRequest+Alamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		DBF1C33720E905FD003FAFE4 /* DeezerSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeezerSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF1C33B20E905FD003FAFE4 /* DeezerSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerSampleUITests.swift; sourceTree = "<group>"; };
 		DBF1C33D20E905FD003FAFE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBF1C35620E9089C003FAFE4 /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
+		DBF1C35920E908BE003FAFE4 /* NetworkerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkerRequest.swift; sourceTree = "<group>"; };
+		DBF1C35E20E908F5003FAFE4 /* NetworkerRequest+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkerRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		FCE51C3DC3823B5A4C55099F /* Pods_DeezerSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeezerSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -220,6 +226,7 @@
 		DBF1C34F20E90693003FAFE4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DBF1C35520E9088E003FAFE4 /* Networker */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -257,6 +264,24 @@
 		DBF1C35420E906E5003FAFE4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DBF1C35520E9088E003FAFE4 /* Networker */ = {
+			isa = PBXGroup;
+			children = (
+				DBF1C35820E908AC003FAFE4 /* Model */,
+				DBF1C35620E9089C003FAFE4 /* Networker.swift */,
+			);
+			path = Networker;
+			sourceTree = "<group>";
+		};
+		DBF1C35820E908AC003FAFE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DBF1C35920E908BE003FAFE4 /* NetworkerRequest.swift */,
+				DBF1C35E20E908F5003FAFE4 /* NetworkerRequest+Alamofire.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -477,6 +502,9 @@
 			files = (
 				DBF1C31E20E905FC003FAFE4 /* ViewController.swift in Sources */,
 				DBF1C31C20E905FC003FAFE4 /* AppDelegate.swift in Sources */,
+				DBF1C35720E9089C003FAFE4 /* Networker.swift in Sources */,
+				DBF1C35F20E908F5003FAFE4 /* NetworkerRequest+Alamofire.swift in Sources */,
+				DBF1C35A20E908BE003FAFE4 /* NetworkerRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,7 +681,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q8ABJ65KZT;
 				INFOPLIST_FILE = DeezerSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cpo.DeezerSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -669,7 +700,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q8ABJ65KZT;
 				INFOPLIST_FILE = DeezerSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cpo.DeezerSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -686,7 +720,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q8ABJ65KZT;
 				INFOPLIST_FILE = DeezerSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cpo.DeezerSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -704,7 +742,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q8ABJ65KZT;
 				INFOPLIST_FILE = DeezerSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cpo.DeezerSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -721,7 +763,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q8ABJ65KZT;
 				INFOPLIST_FILE = DeezerSampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cpo.DeezerSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -738,7 +784,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q8ABJ65KZT;
 				INFOPLIST_FILE = DeezerSampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cpo.DeezerSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
