@@ -22,6 +22,7 @@
 		DBF1C35F20E908F5003FAFE4 /* NetworkerRequest+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C35E20E908F5003FAFE4 /* NetworkerRequest+Alamofire.swift */; };
 		DBF1C36220E909C4003FAFE4 /* DeezerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C36120E909C4003FAFE4 /* DeezerAPI.swift */; };
 		DBF1C36420E90A45003FAFE4 /* PlaylistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C36320E90A45003FAFE4 /* PlaylistModel.swift */; };
+		DBF1C36720E90BB1003FAFE4 /* DeezerPlaylistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C36620E90BB1003FAFE4 /* DeezerPlaylistModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		DBF1C35E20E908F5003FAFE4 /* NetworkerRequest+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkerRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		DBF1C36120E909C4003FAFE4 /* DeezerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerAPI.swift; sourceTree = "<group>"; };
 		DBF1C36320E90A45003FAFE4 /* PlaylistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistModel.swift; sourceTree = "<group>"; };
+		DBF1C36620E90BB1003FAFE4 /* DeezerPlaylistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerPlaylistModel.swift; sourceTree = "<group>"; };
 		FCE51C3DC3823B5A4C55099F /* Pods_DeezerSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeezerSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -295,9 +297,18 @@
 		DBF1C36020E909A7003FAFE4 /* DeezerAPI */ = {
 			isa = PBXGroup;
 			children = (
+				DBF1C36520E90B97003FAFE4 /* Model */,
 				DBF1C36120E909C4003FAFE4 /* DeezerAPI.swift */,
 			);
 			path = DeezerAPI;
+			sourceTree = "<group>";
+		};
+		DBF1C36520E90B97003FAFE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DBF1C36620E90BB1003FAFE4 /* DeezerPlaylistModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,6 +531,7 @@
 				DBF1C35720E9089C003FAFE4 /* Networker.swift in Sources */,
 				DBF1C36220E909C4003FAFE4 /* DeezerAPI.swift in Sources */,
 				DBF1C35F20E908F5003FAFE4 /* NetworkerRequest+Alamofire.swift in Sources */,
+				DBF1C36720E90BB1003FAFE4 /* DeezerPlaylistModel.swift in Sources */,
 				DBF1C35A20E908BE003FAFE4 /* NetworkerRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
