@@ -97,11 +97,8 @@
 		DBF1C31A20E905FC003FAFE4 /* DeezerSample */ = {
 			isa = PBXGroup;
 			children = (
-				DBF1C31B20E905FC003FAFE4 /* AppDelegate.swift */,
-				DBF1C31D20E905FC003FAFE4 /* ViewController.swift */,
-				DBF1C31F20E905FC003FAFE4 /* Main.storyboard */,
-				DBF1C32220E905FD003FAFE4 /* Assets.xcassets */,
-				DBF1C32420E905FD003FAFE4 /* LaunchScreen.storyboard */,
+				DBF1C34920E90637003FAFE4 /* Classes */,
+				DBF1C34A20E9063E003FAFE4 /* Resources */,
 				DBF1C32720E905FD003FAFE4 /* Info.plist */,
 			);
 			path = DeezerSample;
@@ -123,6 +120,97 @@
 				DBF1C33D20E905FD003FAFE4 /* Info.plist */,
 			);
 			path = DeezerSampleUITests;
+			sourceTree = "<group>";
+		};
+		DBF1C34920E90637003FAFE4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DBF1C35220E90694003FAFE4 /* Application */,
+				DBF1C35320E90694003FAFE4 /* Repositories */,
+				DBF1C35020E90693003FAFE4 /* Scene */,
+				DBF1C34F20E90693003FAFE4 /* Services */,
+				DBF1C35120E90693003FAFE4 /* Utils */,
+				DBF1C34E20E90693003FAFE4 /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		DBF1C34A20E9063E003FAFE4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DBF1C34D20E90689003FAFE4 /* Design */,
+				DBF1C34B20E90689003FAFE4 /* Storyboards */,
+				DBF1C34C20E90689003FAFE4 /* Texts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DBF1C34B20E90689003FAFE4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DBF1C31F20E905FC003FAFE4 /* Main.storyboard */,
+				DBF1C32420E905FD003FAFE4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DBF1C34C20E90689003FAFE4 /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Texts;
+			sourceTree = "<group>";
+		};
+		DBF1C34D20E90689003FAFE4 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				DBF1C32220E905FD003FAFE4 /* Assets.xcassets */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		DBF1C34E20E90693003FAFE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DBF1C34F20E90693003FAFE4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DBF1C35020E90693003FAFE4 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				DBF1C31D20E905FC003FAFE4 /* ViewController.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		DBF1C35120E90693003FAFE4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DBF1C35220E90694003FAFE4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DBF1C31B20E905FC003FAFE4 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DBF1C35320E90694003FAFE4 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
