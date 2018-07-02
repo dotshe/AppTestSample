@@ -37,6 +37,7 @@
 		DBF1C38620E92E31003FAFE4 /* Image+Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C38520E92E31003FAFE4 /* Image+Filter.swift */; };
 		DBF1C38820E9315A003FAFE4 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C38720E9315A003FAFE4 /* PlaylistViewController.swift */; };
 		DBF1C38A20E93164003FAFE4 /* PlaylistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF1C38920E93164003FAFE4 /* PlaylistViewController.xib */; };
+		DBF1C38C20E934BC003FAFE4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C38B20E934BC003FAFE4 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		DBF1C38520E92E31003FAFE4 /* Image+Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Filter.swift"; sourceTree = "<group>"; };
 		DBF1C38720E9315A003FAFE4 /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		DBF1C38920E93164003FAFE4 /* PlaylistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistViewController.xib; sourceTree = "<group>"; };
+		DBF1C38B20E934BC003FAFE4 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		FCE51C3DC3823B5A4C55099F /* Pods_DeezerSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeezerSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				DBF1C37B20E92D21003FAFE4 /* GradientView.swift */,
+				DBF1C38B20E934BC003FAFE4 /* LoadingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -575,12 +578,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-DeezerSample/Pods-DeezerSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,6 +605,7 @@
 				DBF1C38820E9315A003FAFE4 /* PlaylistViewController.swift in Sources */,
 				DBF1C37620E92CA3003FAFE4 /* PlaylistViewModel.swift in Sources */,
 				DBF1C37C20E92D21003FAFE4 /* GradientView.swift in Sources */,
+				DBF1C38C20E934BC003FAFE4 /* LoadingView.swift in Sources */,
 				DBF1C31C20E905FC003FAFE4 /* AppDelegate.swift in Sources */,
 				DBF1C36420E90A45003FAFE4 /* PlaylistModel.swift in Sources */,
 				DBF1C36E20E90EBF003FAFE4 /* PlaylistsViewController.swift in Sources */,

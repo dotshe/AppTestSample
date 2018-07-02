@@ -16,6 +16,7 @@ class PlaylistsViewModel {
   
   // Observable
   private(set) var playlists: Variable<[PlaylistModel]?> = Variable([])
+  private(set) var loading: Variable<Bool> = Variable(false)
   
   // - Data
   private var playlistViewModels: [PlaylistViewModel] = []
@@ -37,7 +38,9 @@ class PlaylistsViewModel {
    * Fetches playlists
    */
   func fetchPlaylists() {
+    self.loading.value = true
     playlistsRepository.getUserPlaylists(userIdentifier: userIdentifier) { (playlists, error) in
+      self.loading.value = false
       if let error = error {
         self.error = error
         self.playlists.value?.removeAll()

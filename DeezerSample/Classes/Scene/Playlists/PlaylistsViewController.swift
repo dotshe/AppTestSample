@@ -25,6 +25,7 @@ class PlaylistsViewController: UIViewController {
   
   // - UI
   @IBOutlet private var collectionView: UICollectionView!
+  @IBOutlet private var activityView: LoadingView!
   
   // - Data
   var playlistsViewModel: PlaylistsViewModel!
@@ -37,6 +38,7 @@ class PlaylistsViewController: UIViewController {
     super.viewDidLoad()
     prepareUI()
     prepareViewModel()
+    activityView.startAnimating()
   }
   
   override func viewDidLayoutSubviews() {
@@ -119,6 +121,16 @@ extension PlaylistsViewController {
       .asObservable()
       .subscribe({ _ in
         self.collectionView.reloadData()
+      }).disposed(by: disposeBag)
+    self.playlistsViewModel.loading
+      .asObservable()
+      .subscribe({ event in
+        guard let loading = event.element else { return }
+        if loading {
+          self.activityView.startAnimating()
+        } else {
+          self.activityView.stopAnimating()
+        }
       }).disposed(by: disposeBag)
   }
   

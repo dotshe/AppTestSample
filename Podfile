@@ -9,6 +9,7 @@ target 'DeezerSample' do
   pod 'Alamofire'
   pod 'AlamofireImage', '~> 3.3'
   pod 'RxSwift',    '~> 4.0'
+  pod 'NVActivityIndicatorView'
   
   target 'DeezerSampleTests' do
     inherit! :search_paths

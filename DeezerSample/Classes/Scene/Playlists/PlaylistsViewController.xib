@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaylistsViewController" customModule="DeezerSample" customModuleProvider="target">
             <connections>
+                <outlet property="activityView" destination="4Wd-t6-RWs" id="7el-eW-nMn"/>
                 <outlet property="collectionView" destination="4Ig-5o-eHy" id="VUA-Qw-coq"/>
                 <outlet property="view" destination="may-fF-7vS" id="2l1-wn-ola"/>
             </connections>
@@ -35,11 +36,21 @@
                         <outlet property="delegate" destination="-1" id="OiC-j5-oPV"/>
                     </connections>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Wd-t6-RWs" customClass="LoadingView" customModule="DeezerSample" customModuleProvider="target">
+                    <rect key="frame" x="171" y="327" width="32" height="32"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="4tv-VW-ugs"/>
+                        <constraint firstAttribute="height" constant="32" id="RtT-mK-UFv"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="4Wd-t6-RWs" firstAttribute="centerY" secondItem="4Ig-5o-eHy" secondAttribute="centerY" id="EYx-VS-bzZ"/>
                 <constraint firstItem="H59-DU-NDq" firstAttribute="trailing" secondItem="4Ig-5o-eHy" secondAttribute="trailing" id="TsT-CO-SOw"/>
                 <constraint firstItem="H59-DU-NDq" firstAttribute="bottom" secondItem="4Ig-5o-eHy" secondAttribute="bottom" id="YfF-PK-7JM"/>
+                <constraint firstItem="4Wd-t6-RWs" firstAttribute="centerX" secondItem="4Ig-5o-eHy" secondAttribute="centerX" id="Zyt-Ha-wyv"/>
                 <constraint firstItem="4Ig-5o-eHy" firstAttribute="top" secondItem="H59-DU-NDq" secondAttribute="top" id="ggd-pF-z2R"/>
                 <constraint firstItem="4Ig-5o-eHy" firstAttribute="leading" secondItem="H59-DU-NDq" secondAttribute="leading" id="u9F-yD-bul"/>
             </constraints>
