@@ -10,6 +10,7 @@
 		3A71F1D9A0B09F32CBA2AA69 /* Pods_DeezerSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95AC108A3AB93F8CCE3605E /* Pods_DeezerSampleUITests.framework */; };
 		9E238E2D3E30FBEECB913AAE /* Pods_DeezerSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C719845AD77481FF44EC0815 /* Pods_DeezerSample.framework */; };
 		BC525FD3580667219BAD244B /* Pods_DeezerSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE51C3DC3823B5A4C55099F /* Pods_DeezerSampleTests.framework */; };
+		DB54FCF6210726B000FE2130 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54FCF5210726B000FE2130 /* DataManager.swift */; };
 		DBF1C31C20E905FC003FAFE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C31B20E905FC003FAFE4 /* AppDelegate.swift */; };
 		DBF1C32320E905FD003FAFE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF1C32220E905FD003FAFE4 /* Assets.xcassets */; };
 		DBF1C32620E905FD003FAFE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF1C32420E905FD003FAFE4 /* LaunchScreen.storyboard */; };
@@ -66,6 +67,7 @@
 		B95AC108A3AB93F8CCE3605E /* Pods_DeezerSampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeezerSampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EAA75FA1FC2513D38DD07F /* Pods-DeezerSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeezerSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeezerSampleTests/Pods-DeezerSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		C719845AD77481FF44EC0815 /* Pods_DeezerSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeezerSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB54FCF5210726B000FE2130 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		DBF1C31820E905FC003FAFE4 /* DeezerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeezerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF1C31B20E905FC003FAFE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBF1C32020E905FC003FAFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,6 +155,15 @@
 				B95AC108A3AB93F8CCE3605E /* Pods_DeezerSampleUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB54FCF42107260D00FE2130 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DBF1C37520E92CA3003FAFE4 /* PlaylistViewModel.swift */,
+				DBF1C37120E90EEE003FAFE4 /* PlaylistsViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		DBF1C30F20E905FC003FAFE4 = {
@@ -267,6 +278,7 @@
 			children = (
 				DBF1C36020E909A7003FAFE4 /* DeezerAPI */,
 				DBF1C35520E9088E003FAFE4 /* Networker */,
+				DB54FCF5210726B000FE2130 /* DataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -355,10 +367,10 @@
 		DBF1C36C20E90E9A003FAFE4 /* Playlists */ = {
 			isa = PBXGroup;
 			children = (
+				DB54FCF42107260D00FE2130 /* ViewModels */,
 				DBF1C37320E90EF8003FAFE4 /* Cells */,
 				DBF1C36D20E90EBF003FAFE4 /* PlaylistsViewController.swift */,
 				DBF1C36F20E90EDE003FAFE4 /* PlaylistsViewController.xib */,
-				DBF1C37120E90EEE003FAFE4 /* PlaylistsViewModel.swift */,
 			);
 			path = Playlists;
 			sourceTree = "<group>";
@@ -377,7 +389,6 @@
 			children = (
 				DBF1C38720E9315A003FAFE4 /* PlaylistViewController.swift */,
 				DBF1C38920E93164003FAFE4 /* PlaylistViewController.xib */,
-				DBF1C37520E92CA3003FAFE4 /* PlaylistViewModel.swift */,
 			);
 			path = Playlist;
 			sourceTree = "<group>";
@@ -619,6 +630,7 @@
 				DBF1C36720E90BB1003FAFE4 /* DeezerPlaylistModel.swift in Sources */,
 				DBF1C38220E92E0E003FAFE4 /* ImageView+Loading.swift in Sources */,
 				DBF1C37820E92CF3003FAFE4 /* PlaylistCollectionViewCell.swift in Sources */,
+				DB54FCF6210726B000FE2130 /* DataManager.swift in Sources */,
 				DBF1C38420E92E1C003FAFE4 /* UIView+Layout.swift in Sources */,
 				DBF1C35A20E908BE003FAFE4 /* NetworkerRequest.swift in Sources */,
 			);
