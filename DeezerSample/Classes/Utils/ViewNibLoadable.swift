@@ -20,4 +20,11 @@ extension ViewNibLoadable {
   static var bundle: Bundle? {
     return Bundle(for: self)
   }
+  
+  public static func loadFromNib(_ owner: NSObject? = nil, options: [AnyHashable : Any]? = nil) -> Self? {
+    let bundle = Bundle(for: self)
+    let nibIdentifier = String(describing: self)
+    let view = bundle.loadNibNamed(nibIdentifier, owner: owner, options: options)?.first as? Self
+    return view
+  }
 }

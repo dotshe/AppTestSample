@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaylistDetailViewController" customModule="DeezerSample" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="qTI-A6-8eB" id="Jtp-s9-45m"/>
+                <outlet property="tableView" destination="4Gx-Q1-yXt" id="H4g-i3-V9v"/>
+                <outlet property="view" destination="86D-7G-jM1" id="KvR-cO-lHa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="86D-7G-jM1">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTI-A6-8eB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Gx-Q1-yXt">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="UKx-M1-HKO"/>
+                                <outlet property="delegate" destination="-1" id="Ynj-Vn-XaU"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="4Gx-Q1-yXt" secondAttribute="bottom" id="Fiy-oR-f7m"/>
+                        <constraint firstItem="4Gx-Q1-yXt" firstAttribute="top" secondItem="qTI-A6-8eB" secondAttribute="top" id="I7s-KU-faV"/>
+                        <constraint firstItem="4Gx-Q1-yXt" firstAttribute="leading" secondItem="qTI-A6-8eB" secondAttribute="leading" id="WrF-Xe-JYg"/>
+                        <constraint firstAttribute="trailing" secondItem="4Gx-Q1-yXt" secondAttribute="trailing" id="bct-7a-POu"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvV-pW-GGp">
+                    <rect key="frame" x="335" y="28" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="TaH-5D-Qng"/>
+                        <constraint firstAttribute="height" constant="32" id="rdH-3O-MA9"/>
+                    </constraints>
+                    <state key="normal" image="ic_close_white_24pt"/>
+                    <connections>
+                        <action selector="closeButtonIsClicked:" destination="-1" eventType="touchUpInside" id="X6x-7Q-TsI"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="qTI-A6-8eB" firstAttribute="top" secondItem="86D-7G-jM1" secondAttribute="top" id="ZIw-lV-FKS"/>
+                <constraint firstItem="qTI-A6-8eB" firstAttribute="trailing" secondItem="djS-PH-XmK" secondAttribute="trailing" id="aWy-sX-8SQ"/>
+                <constraint firstItem="djS-PH-XmK" firstAttribute="trailing" secondItem="cvV-pW-GGp" secondAttribute="trailing" constant="8" id="e9r-XZ-JQ9"/>
+                <constraint firstItem="qTI-A6-8eB" firstAttribute="leading" secondItem="djS-PH-XmK" secondAttribute="leading" id="qpF-P6-sBI"/>
+                <constraint firstItem="qTI-A6-8eB" firstAttribute="bottom" secondItem="djS-PH-XmK" secondAttribute="bottom" id="rvD-dh-vWB"/>
+                <constraint firstItem="cvV-pW-GGp" firstAttribute="top" secondItem="djS-PH-XmK" secondAttribute="top" constant="8" id="thc-0W-pF3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="djS-PH-XmK"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_close_white_24pt" width="16" height="16"/>
+    </resources>
+</document>

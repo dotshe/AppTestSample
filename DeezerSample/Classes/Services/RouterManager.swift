@@ -27,6 +27,15 @@ class RouterManager {
     return viewController
   }
   
+  /**
+   * Gets a playlist detail view controller for a playlist identifier
+   */
+  func playlistDetailViewController(forPlaylistIdentifier playlistIdentifier: Int) -> PlaylistDetailViewController {
+    let viewController: PlaylistDetailViewController = PlaylistDetailViewController()
+    viewController.tracksViewModel = TracksViewModel(withPlaylistIdentifier: playlistIdentifier)
+    return viewController
+  }
+  
   /*******************************************************************************/
   // MARK: - Navigation - Generic
   
@@ -60,6 +69,14 @@ class RouterManager {
     navigationController.setNavigationBarHidden(true, animated: false)
     presentViewController(navigationController)
   }
+  
+  /**
+   *
+   */
+  func presentPlaylistDetailViewController(forPlaylistIdentifier playlistIdentifier: Int) {
+    let viewController = self.playlistDetailViewController(forPlaylistIdentifier: playlistIdentifier)
+    presentViewController(viewController)
+  }
 }
 
 /*******************************************************************************/
@@ -91,3 +108,4 @@ public extension UIViewController {
     return presentedViewController.topVisibleViewController
   }
 }
+

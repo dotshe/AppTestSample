@@ -108,7 +108,7 @@ extension PlaylistsViewController: UICollectionViewDelegate {
     collectionView.deselectItem(at: indexPath, animated: true)
     
     if let playlistIdentifier = self.playlistsViewModel.playlistIdentifier(atIndex: indexPath.row) {
-      
+      Router.presentPlaylistDetailViewController(forPlaylistIdentifier: playlistIdentifier)
     }
   }
 }
