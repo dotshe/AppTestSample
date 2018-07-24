@@ -10,6 +10,7 @@
 - [x] The playlists will be presented in a grid (3 colums) displaying playlist cover and title.
 - [x] When you click on a playlist you will display it.
 - [x] Display a playlist consist of displaying a header in a collapsing toolbar, showing playlist cover, title, author, formatted duration
+==> I forgot to display the author
 - [x] For listing the tracks, you have to lazy loading - load on scroll down.
 - [x] Track list display the title - artist name and formatted duration
 
@@ -17,12 +18,12 @@
 
 - [x] Using Xcode ==> Version 9.4.1 (9F2000)
 - [x] Using Swift 3,2 / 4 ==> 4
-- [x] Using CocoaPods
-- [x] Using MVVM
-- [x] Using Libraries : RxSwift, Alamofire - pas de RxCocoa
-- [x] Implement all the features above
-- [x] Format duration: HH:mm:ss
-- [ ] ViewModel Unit testing
+- [x] Using CocoaPods
+- [x] Using MVVM
+- [x] Using Libraries : RxSwift, Alamofire - pas de RxCocoa
+- [x] Implement all the features above
+- [x] Format duration: HH:mm:ss
+- [ ] ViewModel Unit testing
 
 ### API informations:
 
@@ -48,11 +49,11 @@ Current dependencies in the application:
 
 To install new dependencies:
 
-    pod install
+pod install
 
 To update dependencies:
 
-    pod update
+pod update
 
 ## TODO
 
