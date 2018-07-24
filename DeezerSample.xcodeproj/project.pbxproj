@@ -14,6 +14,10 @@
 		DB54FCF6210726B000FE2130 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54FCF5210726B000FE2130 /* DataManager.swift */; };
 		DB54FCF8210729CB00FE2130 /* FormattersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54FCF7210729CB00FE2130 /* FormattersHelper.swift */; };
 		DB54FCFC21072EAD00FE2130 /* FormattersHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54FCFB21072EAD00FE2130 /* FormattersHelperTests.swift */; };
+		DB54FCFE210758DD00FE2130 /* TrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54FCFD210758DD00FE2130 /* TrackModel.swift */; };
+		DB54FD00210758F700FE2130 /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54FCFF210758F700FE2130 /* ArtistModel.swift */; };
+		DB54FD022107592500FE2130 /* DeezerTrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54FD012107592500FE2130 /* DeezerTrackModel.swift */; };
+		DB54FD042107594A00FE2130 /* DeezerArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54FD032107594A00FE2130 /* DeezerArtistModel.swift */; };
 		DBF1C31C20E905FC003FAFE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C31B20E905FC003FAFE4 /* AppDelegate.swift */; };
 		DBF1C32320E905FD003FAFE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF1C32220E905FD003FAFE4 /* Assets.xcassets */; };
 		DBF1C32620E905FD003FAFE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF1C32420E905FD003FAFE4 /* LaunchScreen.storyboard */; };
@@ -76,6 +80,10 @@
 		DB54FCF5210726B000FE2130 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		DB54FCF7210729CB00FE2130 /* FormattersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattersHelper.swift; sourceTree = "<group>"; };
 		DB54FCFB21072EAD00FE2130 /* FormattersHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattersHelperTests.swift; sourceTree = "<group>"; };
+		DB54FCFD210758DD00FE2130 /* TrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModel.swift; sourceTree = "<group>"; };
+		DB54FCFF210758F700FE2130 /* ArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModel.swift; sourceTree = "<group>"; };
+		DB54FD012107592500FE2130 /* DeezerTrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerTrackModel.swift; sourceTree = "<group>"; };
+		DB54FD032107594A00FE2130 /* DeezerArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerArtistModel.swift; sourceTree = "<group>"; };
 		DBF1C31820E905FC003FAFE4 /* DeezerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeezerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF1C31B20E905FC003FAFE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBF1C32020E905FC003FAFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -354,6 +362,8 @@
 			isa = PBXGroup;
 			children = (
 				DBF1C36320E90A45003FAFE4 /* PlaylistModel.swift */,
+				DB54FCFD210758DD00FE2130 /* TrackModel.swift */,
+				DB54FCFF210758F700FE2130 /* ArtistModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -390,6 +400,8 @@
 			isa = PBXGroup;
 			children = (
 				DBF1C36620E90BB1003FAFE4 /* DeezerPlaylistModel.swift */,
+				DB54FD012107592500FE2130 /* DeezerTrackModel.swift */,
+				DB54FD032107594A00FE2130 /* DeezerArtistModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -667,8 +679,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBF1C38020E92D4F003FAFE4 /* ViewNibLoadable.swift in Sources */,
+				DB54FCFE210758DD00FE2130 /* TrackModel.swift in Sources */,
 				DBF1C38620E92E31003FAFE4 /* Image+Filter.swift in Sources */,
 				DBF1C38820E9315A003FAFE4 /* PlaylistViewController.swift in Sources */,
+				DB54FD042107594A00FE2130 /* DeezerArtistModel.swift in Sources */,
 				DB54FCF8210729CB00FE2130 /* FormattersHelper.swift in Sources */,
 				DBF1C37620E92CA3003FAFE4 /* PlaylistViewModel.swift in Sources */,
 				DBF1C37C20E92D21003FAFE4 /* GradientView.swift in Sources */,
@@ -679,9 +693,11 @@
 				DBF1C35720E9089C003FAFE4 /* Networker.swift in Sources */,
 				DBF1C36220E909C4003FAFE4 /* DeezerAPI.swift in Sources */,
 				DBF1C36B20E90DDA003FAFE4 /* PlaylistRepository.swift in Sources */,
+				DB54FD022107592500FE2130 /* DeezerTrackModel.swift in Sources */,
 				DBF1C36920E90C4A003FAFE4 /* DeezerAPI+User.swift in Sources */,
 				DBF1C37220E90EEE003FAFE4 /* PlaylistsViewModel.swift in Sources */,
 				DBF1C37E20E92D41003FAFE4 /* ViewReusable.swift in Sources */,
+				DB54FD00210758F700FE2130 /* ArtistModel.swift in Sources */,
 				DBF1C35F20E908F5003FAFE4 /* NetworkerRequest+Alamofire.swift in Sources */,
 				DBF1C36720E90BB1003FAFE4 /* DeezerPlaylistModel.swift in Sources */,
 				DBF1C38220E92E0E003FAFE4 /* ImageView+Loading.swift in Sources */,
@@ -866,7 +882,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q8ABJ65KZT;
 				INFOPLIST_FILE = DeezerSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cpo.DeezerSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -882,7 +901,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q8ABJ65KZT;
 				INFOPLIST_FILE = DeezerSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cpo.DeezerSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -899,7 +921,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q8ABJ65KZT;
 				INFOPLIST_FILE = DeezerSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cpo.DeezerSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -917,7 +943,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q8ABJ65KZT;
 				INFOPLIST_FILE = DeezerSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cpo.DeezerSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -934,7 +964,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q8ABJ65KZT;
 				INFOPLIST_FILE = DeezerSampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cpo.DeezerSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -951,7 +985,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q8ABJ65KZT;
 				INFOPLIST_FILE = DeezerSampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cpo.DeezerSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
