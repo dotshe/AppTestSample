@@ -11,6 +11,9 @@ import XCTest
 
 class FormattersHelperTests: XCTestCase {
   
+  /*******************************************************************************/
+  // MARK: - SetUp/TearDown
+  
   override func setUp() {
     super.setUp()
   }
@@ -18,6 +21,9 @@ class FormattersHelperTests: XCTestCase {
   override func tearDown() {
     super.tearDown()
   }
+  
+  /*******************************************************************************/
+  // MARK: - Tests
   
   /**
    * Generic Test
