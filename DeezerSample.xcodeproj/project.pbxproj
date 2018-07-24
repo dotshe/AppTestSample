@@ -114,6 +114,7 @@
 		DB54FD23210762CC00FE2130 /* TrackRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRepository.swift; sourceTree = "<group>"; };
 		DB54FD252107641D00FE2130 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
 		DB54FD272107642400FE2130 /* TrackTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackTableViewCell.xib; sourceTree = "<group>"; };
+		DB54FD29210764E200FE2130 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DBF1C31820E905FC003FAFE4 /* DeezerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeezerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF1C31B20E905FC003FAFE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBF1C32020E905FC003FAFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -291,6 +292,7 @@
 		DBF1C30F20E905FC003FAFE4 = {
 			isa = PBXGroup;
 			children = (
+				DB54FD29210764E200FE2130 /* README.md */,
 				DBF1C31A20E905FC003FAFE4 /* DeezerSample */,
 				DBF1C32F20E905FD003FAFE4 /* DeezerSampleTests */,
 				DBF1C33A20E905FD003FAFE4 /* DeezerSampleUITests */,
