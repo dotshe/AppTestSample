@@ -53,6 +53,7 @@ class PlaylistDetailViewController: UIViewController {
     super.viewDidLoad()
     prepare()
     bindViewModel()
+    updateHeader()
     self.tracksViewModel.fetchTracks()
   }
   

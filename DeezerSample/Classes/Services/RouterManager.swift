@@ -32,6 +32,7 @@ class RouterManager {
    */
   func playlistDetailViewController(forPlaylistIdentifier playlistIdentifier: Int) -> PlaylistDetailViewController {
     let viewController: PlaylistDetailViewController = PlaylistDetailViewController()
+    viewController.modalTransitionStyle = .crossDissolve
     viewController.tracksViewModel = TracksViewModel(withPlaylistIdentifier: playlistIdentifier)
     return viewController
   }

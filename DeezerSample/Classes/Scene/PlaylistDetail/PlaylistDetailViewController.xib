@@ -44,6 +44,21 @@
                         <constraint firstAttribute="trailing" secondItem="4Gx-Q1-yXt" secondAttribute="trailing" id="bct-7a-POu"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIR-N0-wET" customClass="GradientView" customModule="DeezerSample" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="72" id="meE-O2-2lw"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                            <color key="value" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvV-pW-GGp">
                     <rect key="frame" x="335" y="28" width="32" height="32"/>
                     <constraints>
@@ -58,8 +73,11 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="vIR-N0-wET" firstAttribute="leading" secondItem="djS-PH-XmK" secondAttribute="leading" id="DAF-Zt-XoX"/>
+                <constraint firstItem="vIR-N0-wET" firstAttribute="top" secondItem="86D-7G-jM1" secondAttribute="top" id="HAL-iP-Ns7"/>
                 <constraint firstItem="qTI-A6-8eB" firstAttribute="top" secondItem="86D-7G-jM1" secondAttribute="top" id="ZIw-lV-FKS"/>
                 <constraint firstItem="qTI-A6-8eB" firstAttribute="trailing" secondItem="djS-PH-XmK" secondAttribute="trailing" id="aWy-sX-8SQ"/>
+                <constraint firstItem="djS-PH-XmK" firstAttribute="trailing" secondItem="vIR-N0-wET" secondAttribute="trailing" id="c6A-44-eXW"/>
                 <constraint firstItem="djS-PH-XmK" firstAttribute="trailing" secondItem="cvV-pW-GGp" secondAttribute="trailing" constant="8" id="e9r-XZ-JQ9"/>
                 <constraint firstItem="qTI-A6-8eB" firstAttribute="leading" secondItem="djS-PH-XmK" secondAttribute="leading" id="qpF-P6-sBI"/>
                 <constraint firstItem="qTI-A6-8eB" firstAttribute="bottom" secondItem="djS-PH-XmK" secondAttribute="bottom" id="rvD-dh-vWB"/>
