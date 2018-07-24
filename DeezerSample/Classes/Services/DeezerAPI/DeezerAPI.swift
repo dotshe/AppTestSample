@@ -16,6 +16,8 @@ class DeezerAPI {
   enum Paths {
     case user(userIdentifier: Int)
     case userPlaylists(userIdentifier: Int)
+    case playlistInfo(playlistIdentifier: Int)
+    case playlistTracks(playlistIdentifier: Int)
     
     var value: String {
       switch(self) {
@@ -23,6 +25,10 @@ class DeezerAPI {
         return "user/\(userIdentifier)"
       case .userPlaylists(let userIdentifier):
         return Paths.user(userIdentifier: userIdentifier).value + "/playlists?limit=100"
+      case .playlistInfo(let playlistIdentifier):
+        return "playlist/\(playlistIdentifier)"
+      case .playlistTracks(let playlistIdentifier):
+        return Paths.playlistInfo(playlistIdentifier: playlistIdentifier).value + "/tracks"
       }
     }
   }
