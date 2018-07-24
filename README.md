@@ -59,3 +59,8 @@ To update dependencies:
 1. Fix the warning concerning `Variable` deprecation and Rx
 2. Add transition animation between playlists scene and playlist detail scene
 3. Manage users
+4. Replace `static let deezerAPI` in repositories
+5. Fix `TODO(CPO)`
+6. Manage error/empty in scenes
+7. Add more tests on ViewModels
+
