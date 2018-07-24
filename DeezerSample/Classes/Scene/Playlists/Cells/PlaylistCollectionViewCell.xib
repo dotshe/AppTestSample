@@ -12,21 +12,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ybx-34-E0c" customClass="PlaylistCollectionViewCell" customModule="TestRx" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iEe-1S-W27" customClass="PlaylistCollectionViewCell" customModule="DeezerSample" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="175" height="167"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                 <rect key="frame" x="0.0" y="0.0" width="175" height="167"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="amo-H3-fDd">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dCa-vA-jIY">
                         <rect key="frame" x="0.0" y="0.0" width="175" height="167"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjo-1P-Svn" customClass="GradientView" customModule="TestRx" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vr6-fU-I9C" customClass="GradientView" customModule="DeezerSample" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="175" height="167"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playlist's title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4F-ah-vFp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playlist's title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHa-5R-yLl">
                                 <rect key="frame" x="8" y="141" width="159" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -35,9 +35,9 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="G4F-ah-vFp" secondAttribute="trailing" constant="8" id="HsE-9S-vV0"/>
-                            <constraint firstAttribute="bottom" secondItem="G4F-ah-vFp" secondAttribute="bottom" constant="8" id="kUq-hb-J0a"/>
-                            <constraint firstItem="G4F-ah-vFp" firstAttribute="leading" secondItem="kjo-1P-Svn" secondAttribute="leading" constant="8" id="r6e-g3-OWE"/>
+                            <constraint firstAttribute="trailing" secondItem="HHa-5R-yLl" secondAttribute="trailing" constant="8" id="CWG-xl-geb"/>
+                            <constraint firstAttribute="bottom" secondItem="HHa-5R-yLl" secondAttribute="bottom" constant="8" id="IT6-pE-YfF"/>
+                            <constraint firstItem="HHa-5R-yLl" firstAttribute="leading" secondItem="Vr6-fU-I9C" secondAttribute="leading" constant="8" id="fIM-eL-CyV"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isVertical" value="YES"/>
@@ -53,20 +53,20 @@
             </view>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="amo-H3-fDd" secondAttribute="trailing" id="3O5-2T-jlX"/>
-                <constraint firstItem="kjo-1P-Svn" firstAttribute="top" secondItem="Ybx-34-E0c" secondAttribute="top" id="3Xp-cO-gEz"/>
-                <constraint firstItem="amo-H3-fDd" firstAttribute="leading" secondItem="Ybx-34-E0c" secondAttribute="leading" id="BhW-og-foZ"/>
-                <constraint firstItem="amo-H3-fDd" firstAttribute="top" secondItem="Ybx-34-E0c" secondAttribute="top" id="Dzz-Pn-nog"/>
-                <constraint firstAttribute="bottom" secondItem="amo-H3-fDd" secondAttribute="bottom" id="SeA-hx-Pjy"/>
-                <constraint firstAttribute="bottom" secondItem="kjo-1P-Svn" secondAttribute="bottom" id="jDV-qI-tF9"/>
-                <constraint firstItem="kjo-1P-Svn" firstAttribute="leading" secondItem="Ybx-34-E0c" secondAttribute="leading" id="thT-cg-vlt"/>
-                <constraint firstAttribute="trailing" secondItem="kjo-1P-Svn" secondAttribute="trailing" id="tl6-RL-JIk"/>
+                <constraint firstAttribute="trailing" secondItem="dCa-vA-jIY" secondAttribute="trailing" id="8kG-8j-3iX"/>
+                <constraint firstAttribute="bottom" secondItem="Vr6-fU-I9C" secondAttribute="bottom" id="E8O-oA-Xn7"/>
+                <constraint firstItem="dCa-vA-jIY" firstAttribute="leading" secondItem="iEe-1S-W27" secondAttribute="leading" id="ZkI-AU-NJv"/>
+                <constraint firstAttribute="bottom" secondItem="dCa-vA-jIY" secondAttribute="bottom" id="Ztj-Gu-EXH"/>
+                <constraint firstAttribute="trailing" secondItem="Vr6-fU-I9C" secondAttribute="trailing" id="aCh-i4-yJa"/>
+                <constraint firstItem="dCa-vA-jIY" firstAttribute="top" secondItem="iEe-1S-W27" secondAttribute="top" id="hL9-P5-cHR"/>
+                <constraint firstItem="Vr6-fU-I9C" firstAttribute="top" secondItem="iEe-1S-W27" secondAttribute="top" id="lKJ-mo-zDd"/>
+                <constraint firstItem="Vr6-fU-I9C" firstAttribute="leading" secondItem="iEe-1S-W27" secondAttribute="leading" id="ymD-kG-Pnz"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="TfQ-uB-7Bc"/>
+            <viewLayoutGuide key="safeArea" id="S7y-lR-sLm"/>
             <size key="customSize" width="175" height="167"/>
             <connections>
-                <outlet property="coverImageView" destination="amo-H3-fDd" id="2Q2-Vw-rMG"/>
-                <outlet property="titleLabel" destination="G4F-ah-vFp" id="Mft-lr-Aua"/>
+                <outlet property="coverImageView" destination="dCa-vA-jIY" id="wbC-AU-tWw"/>
+                <outlet property="titleLabel" destination="HHa-5R-yLl" id="wDJ-Vp-QvQ"/>
             </connections>
             <point key="canvasLocation" x="-56.5" y="83.5"/>
         </collectionViewCell>

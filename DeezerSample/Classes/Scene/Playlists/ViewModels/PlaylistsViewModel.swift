@@ -14,20 +14,21 @@ class PlaylistsViewModel {
   /*******************************************************************************/
   // MARK: - Properties
   
-  // Observable
+  // - Observable
   private(set) var playlists: Variable<[PlaylistModel]?> = Variable([])
   private(set) var loading: Variable<Bool> = Variable(false)
+  private(set) var error: Variable<Error?> = Variable(nil)
   
   // - Data
   private var playlistViewModels: [PlaylistViewModel] = []
-  var error: Error?
-  private let userIdentifier: String = "5"
+  private let userIdentifier: Int
   private let playlistsRepository: PlaylistRepository
   
   /*******************************************************************************/
   // MARK: - Birth and Death
   
-  init(withPlaylistsRepository playlistsRepository: PlaylistRepository) {
+  init(withUserIdentifier userIdentifier: Int, playlistsRepository: PlaylistRepository = PlaylistRepository()) {
+    self.userIdentifier = userIdentifier
     self.playlistsRepository = playlistsRepository
   }
   
@@ -39,16 +40,16 @@ class PlaylistsViewModel {
    */
   func fetchPlaylists() {
     self.loading.value = true
-    playlistsRepository.getUserPlaylists(userIdentifier: userIdentifier) { (playlists, error) in
+    playlistsRepository.getPlaylists(forUserIdentifier: userIdentifier) { (playlists, error) in
       self.loading.value = false
       if let error = error {
-        self.error = error
-        self.playlists.value?.removeAll()
+        self.error.value = error
         self.playlistViewModels.removeAll()
+        self.playlists.value?.removeAll()
       } else {
-        self.error = nil
+        self.error.value = nil
         self.playlistViewModels = playlists.map({ playlist -> PlaylistViewModel in
-          return PlaylistViewModel(withPlaylist: playlist)
+          return PlaylistViewModel(withPlaylistIdentifier: playlist.identifier)
         })
         self.playlists.value = playlists
       }
@@ -74,5 +75,17 @@ class PlaylistsViewModel {
   func playlistViewModel(atIndex index: Int) -> PlaylistViewModel? {
     guard index < numberOfPlaylistViewModels() else { return nil }
     return self.playlistViewModels[index]
+  }
+  
+  /**
+   * Gets the playlist identifier for the specified index
+   *
+   * - parameters index: The index of the view model
+   *
+   * - return: The playlist identifier for the specified index
+   */
+  func playlistIdentifier(atIndex index: Int) -> Int? {
+    guard index < numberOfPlaylistViewModels() else { return nil }
+    return self.playlistViewModels[index].playlistIdentifier
   }
 }

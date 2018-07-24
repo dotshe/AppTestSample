@@ -14,8 +14,8 @@ class DeezerAPI {
   // MARK: - Constants & Enums
   
   enum Paths {
-    case user(userIdentifier: String)
-    case userPlaylists(userIdentifier: String)
+    case user(userIdentifier: Int)
+    case userPlaylists(userIdentifier: Int)
     
     var value: String {
       switch(self) {

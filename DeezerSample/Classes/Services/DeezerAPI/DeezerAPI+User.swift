@@ -24,7 +24,7 @@ extension DeezerAPI {
    * - parameter identifier         : The user's identifier
    * - parameter completionHandler  : The closure called when the request is completed
    */
-  func getUserPlaylists(userIdentifier: String, completionHandler: @escaping GetPlaylistsHandlerType) {
+  func getUserPlaylists(userIdentifier: Int, completionHandler: @escaping GetPlaylistsHandlerType) {
     let path: String = Paths.userPlaylists(userIdentifier: userIdentifier).value
     let request: NetworkerRequest = constructRequest(method: .get, path: path)
     Networker.execute(request: request) { response, error in

@@ -29,9 +29,8 @@ class PlaylistCollectionViewCell: UICollectionViewCell, ViewReusable {
   
   // - Data
   var playlistViewModel: PlaylistViewModel? {
-    didSet {
-      bindViewModel()
-    }
+    willSet { unbindViewModel() }
+    didSet { bindViewModel() }
   }
   let disposeBag = DisposeBag()
   
@@ -53,20 +52,30 @@ class PlaylistCollectionViewCell: UICollectionViewCell, ViewReusable {
   
   override func prepareForReuse() {
     super.prepareForReuse()
-    self.coverImageView.image = nil
-    self.titleLabel.text = nil
+    cleanView()
   }
   
   /*******************************************************************************/
   // MARK: - Update
   
-  private func updateCoverUrl(coverUrl: URL?) {
-    let placeholder: UIImage? = nil
-    self.coverImageView.setImage(url: coverUrl, placeholder: placeholder)
+  private func updateView() {
+    updateTitle()
+    updateCover()
   }
   
-  private func updateTitle(title: String?) {
-    self.titleLabel.text = title
+  private func updateTitle() {
+    self.titleLabel.text = self.playlistViewModel?.titleFormatted()
+  }
+  
+  private func updateCover() {
+    let url: URL? = self.playlistViewModel?.mediumCoverUrl()
+    let placeholder: UIImage? = nil
+    self.coverImageView.setImage(url: url, placeholder: placeholder)
+  }
+  
+  private func cleanView() {
+    self.coverImageView.image = nil
+    self.titleLabel.text = nil
   }
 }
 
@@ -79,17 +88,10 @@ extension PlaylistCollectionViewCell {
    *
    */
   private func bindViewModel() {
-    self.playlistViewModel?.coverUrl
+    self.playlistViewModel?.playlist
       .asObservable()
-      .subscribe({ e in
-        guard let coverUrl = e.element else { return }
-        self.updateCoverUrl(coverUrl: coverUrl)
-      }).disposed(by: disposeBag)
-    self.playlistViewModel?.title
-      .asObservable()
-      .subscribe({ e in
-        guard let title = e.element else { return }
-        self.updateTitle(title: title)
+      .subscribe({ event in
+        self.updateView()
       }).disposed(by: disposeBag)
   }
   
@@ -97,6 +99,7 @@ extension PlaylistCollectionViewCell {
    *
    */
   private func unbindViewModel() {
-    
+    self.cleanView()
   }
 }
+

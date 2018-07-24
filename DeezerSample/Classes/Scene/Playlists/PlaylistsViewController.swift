@@ -91,6 +91,12 @@ extension PlaylistsViewController: UICollectionViewDataSource {
     
     return cell
   }
+  
+  func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    if let cell = cell as? PlaylistCollectionViewCell {
+      cell.playlistViewModel?.fetchPlaylist()
+    }
+  }
 }
 
 /*******************************************************************************/
@@ -101,10 +107,9 @@ extension PlaylistsViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     collectionView.deselectItem(at: indexPath, animated: true)
     
-    // Navigation (maybe a router)
-    let playlistViewController = PlaylistViewController()
-    playlistViewController.playlistViewModel = self.playlistsViewModel.playlistViewModel(atIndex: indexPath.row)
-    navigationController?.pushViewController(playlistViewController, animated: true)
+    if let playlistIdentifier = self.playlistsViewModel.playlistIdentifier(atIndex: indexPath.row) {
+      
+    }
   }
 }
 
