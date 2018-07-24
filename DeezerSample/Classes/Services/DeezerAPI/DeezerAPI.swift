@@ -42,8 +42,19 @@ class DeezerAPI {
   /*******************************************************************************/
   // MARK: - Utils
   
+  /**
+   * Constructs a request according parameters.
+   *
+   * - parameter method     : HTTP's method
+   * - parameter path       : Request's path
+   * - parameter parameters : Request's parameters
+   * - parameter encoding   : Request's parameters encoding
+   *
+   * - return: An object that represents a request.
+   */
   func constructRequest(method: NetworkerRequest.Method, path: String, parameters: [String: Any] = [:], encoding: NetworkerRequest.ParameterEncoding? = nil) -> NetworkerRequest {
     
+    // Manage parameters encoding
     let parametersEncoding: NetworkerRequest.ParameterEncoding
     if let encoding = encoding {
       parametersEncoding = encoding
@@ -56,6 +67,7 @@ class DeezerAPI {
       }
     }
     
+    // Create the request
     return NetworkerRequest(
       method: method,
       scheme: self.scheme,

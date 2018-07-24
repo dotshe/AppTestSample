@@ -16,8 +16,8 @@ class PlaylistDetailHeaderViewModel {
   
   private struct Constants {
     struct Texts {
-      static let titlePlaceholder: String = "-"
-      static let durationPlaceholder: String = "--:--"
+      static let titlePlaceholder: String = "PLAYLIST_DETAIL_SCENE_TITLE_PLACEHOLDER".localized
+      static let durationPlaceholder: String = "PLAYLIST_DETAIL_SCENE_DURATION_PLACEHOLDER".localized
     }
   }
   
@@ -64,7 +64,7 @@ class PlaylistDetailHeaderViewModel {
         self.playlist = playlist
       } else {
         self.playlist = nil
-        // TODO(cpo): Manage the error or missing playlist
+        // TODO(CPO): Manage the error or missing playlist
       }
     }
   }

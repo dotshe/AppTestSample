@@ -24,6 +24,12 @@ class PlaylistRepository {
   /*******************************************************************************/
   // MARK: - CRUD
   
+  /**
+   * Gets the playlists according a user identifier.
+   *
+   * - parameter userIdentifier     : The user identifier from whom the playlist should be loaded.
+   * - parameter completionHandler  : The closure called when the playlist is loaded
+   */
   func getPlaylists(forUserIdentifier userIdentifier: Int, completionHandler: @escaping GetPlaylistsHandlerType) {
     // Get playlists in 'cache' if possible
     if let playlists = DataManager.shared.playlists(forUserIdentifier: userIdentifier), playlists.count > 0 {
@@ -40,7 +46,10 @@ class PlaylistRepository {
   }
   
   /**
+   * Gets the playlist according a playlist identifier.
    *
+   * - parameter identifeir         : The playlist identifier to load
+   * - parameter completionHandler  : The closure called when the playlist is loaded
    */
   func getPlaylist(forIdentifier idenfier: Int, completionHandler: @escaping GetPlaylistHandlerType) {
     // Get playlist in 'cache' if possible
@@ -50,5 +59,7 @@ class PlaylistRepository {
     }
     
     // Call Deezer's API
+    // TODO(CPO) Currently not mandatory according the navigation
+    completionHandler(nil, nil)
   }
 }

@@ -5,3 +5,7 @@
   Created by cpo on 24/07/2018.
   Copyright © 2018 CPO. All rights reserved.
 */
+
+// PlaylistDetail
+"PLAYLIST_DETAIL_SCENE_TITLE_PLACEHOLDER"="-";
+"PLAYLIST_DETAIL_SCENE_DURATION_PLACEHOLDER"="--:--";

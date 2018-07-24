@@ -14,7 +14,7 @@ class PlaylistCollectionViewCell: UICollectionViewCell, ViewReusable {
   /*******************************************************************************/
   // MARK: - Constant & Enums
   
-  struct Constants {
+  private struct Constants {
     struct Layout {
       static let cornerRadius: CGFloat = 8.0
     }

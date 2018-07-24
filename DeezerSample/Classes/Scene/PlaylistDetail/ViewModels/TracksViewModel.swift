@@ -12,6 +12,16 @@ import RxSwift
 class TracksViewModel {
   
   /*******************************************************************************/
+  // MARK: - Constants
+  
+  private struct Constants {
+    struct Values {
+      static let firstPage: Int = 0
+      static let pageIncrement: Int = 1
+    }
+  }
+  
+  /*******************************************************************************/
   // MARK: - Properties
   
   // - Observable
@@ -22,7 +32,7 @@ class TracksViewModel {
   
   // - Data
   let playlistIdentifier: Int
-  private var page: Int = 0
+  private var page: Int = Constants.Values.firstPage
   private var pagination: PaginationModel? = nil
   private var tracksViewModels: [TrackViewModel] = []
   private let trackRepository: TrackRepository
@@ -47,7 +57,8 @@ class TracksViewModel {
       return
     }
     
-    self.page = 0
+    // Reset pagination
+    self.page = Constants.Values.firstPage
     self.pagination = nil
     
     self.loading.value = true
@@ -61,14 +72,14 @@ class TracksViewModel {
         self.tracks.value = tracks
         self.error.value = nil
         if let _ = pagination?.nextUrl {
-          self.page += 1
+          self.page += Constants.Values.pageIncrement
         }
         self.pagination = pagination
       } else {
         self.error.value = error
         self.tracks.value?.removeAll()
         self.tracksViewModels.removeAll()
-        self.page = 0
+        self.page = Constants.Values.firstPage
         self.pagination = nil
       }
     }
@@ -91,14 +102,14 @@ class TracksViewModel {
         self.tracks.value?.append(contentsOf: tracks)
         self.error.value = nil
         if let _ = pagination?.nextUrl {
-          self.page += 1
+          self.page += Constants.Values.pageIncrement
         }
         self.pagination = pagination
       } else {
         self.error.value = error
         self.tracks.value?.removeAll()
         self.tracksViewModels.removeAll()
-        self.page = 0
+        self.page = Constants.Values.firstPage
         self.pagination = nil
       }
     }
@@ -125,6 +136,11 @@ class TracksViewModel {
     return self.tracksViewModels[index]
   }
   
+  /**
+   * Returns a boolean to know if there is more tracks or not
+   *
+   * - return: `true` when more tracks are available and can be loaded else `false`
+   */
   func canLoadMoreTracks() -> Bool {
     guard self.nextLoading.value == false else { return false }
     guard let pagination = self.pagination else { return false }
@@ -132,6 +148,11 @@ class TracksViewModel {
     return true
   }
   
+  /**
+   * Returns a boolean to know if next tracks are loading
+   *
+   * - return: `true` when loading next tracks else `false`
+   */
   func isLoadingNextTracks() -> Bool {
     return self.nextLoading.value
   }

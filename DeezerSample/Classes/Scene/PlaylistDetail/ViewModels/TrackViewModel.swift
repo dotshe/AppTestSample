@@ -35,14 +35,29 @@ class TrackViewModel {
   /*******************************************************************************/
   // MARK: - Display
   
+  /**
+   * Returns a text formatted for a track's title
+   *
+   * return: The text formatted for a track's title
+   */
   func titleFormatted() -> String {
     return track.title
   }
   
+  /**
+   * Returns a text formatted for a track's artist
+   *
+   * return: The text formatted for a track's artist
+   */
   func artistFormatted() -> String {
     return track.artist.name
   }
   
+  /**
+   * Returns a text formatted for a track's duration
+   *
+   * return: The text formatted for a track's duration
+   */
   func durationFormatted() -> String {
     return FormattersHelper.formatTrackDuration(track.duration)
   }

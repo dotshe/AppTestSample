@@ -14,7 +14,7 @@ class PlaylistsViewController: UIViewController {
   /*******************************************************************************/
   // MARK: - Constant & Enums
   
-  struct Constants {
+  private struct Constants {
     struct Layout {
       static let numberOfItemsByLine: Int = 3
     }

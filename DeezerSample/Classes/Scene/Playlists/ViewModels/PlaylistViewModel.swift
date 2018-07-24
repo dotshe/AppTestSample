@@ -64,7 +64,7 @@ class PlaylistViewModel {
    */
   func titleFormatted() -> String {
     guard let title = self.playlist.value?.title else {
-      return ""
+      return "PLAYLIST_DETAIL_SCENE_TITLE_PLACEHOLDER".localized
     }
     return title
   }
@@ -90,7 +90,7 @@ class PlaylistViewModel {
    */
   func durationFormatted() -> String {
     guard let duration = self.playlist.value?.duration else {
-      return "mm:ss"
+      return "PLAYLIST_DETAIL_SCENE_DURATION_PLACEHOLDER".localized
     }
     return FormattersHelper.formatPlaylistDuration(duration)
   }

@@ -13,7 +13,7 @@ class DeezerTrackModel: TrackModel {
   /*******************************************************************************/
   // MARK: - Constants & Enums
   
-  /// Keys from Deezer's API for a playlist
+  /// Keys from Deezer's API for a track
   struct APIKeys {
     static let identifier     = "id"
     static let title          = "title"

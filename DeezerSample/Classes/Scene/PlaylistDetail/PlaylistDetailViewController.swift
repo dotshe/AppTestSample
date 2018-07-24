@@ -12,6 +12,18 @@ import RxSwift
 class PlaylistDetailViewController: UIViewController {
   
   /*******************************************************************************/
+  // MARK: - Constants
+  
+  private struct Constants {
+    struct Layout {
+      static let cellHeight: CGFloat = 68.0
+    }
+    struct Values {
+      static let loadNextDataCellCountLimit: Int = 5
+    }
+  }
+  
+  /*******************************************************************************/
   // MARK: - Properties
   
   // - UI
@@ -83,7 +95,7 @@ class PlaylistDetailViewController: UIViewController {
     let reuseIdentifier: String = TrackTableViewCell.reuseIdentifier
     let cellNib: UINib? = TrackTableViewCell.nib
     self.tableView.register(cellNib, forCellReuseIdentifier: reuseIdentifier)
-    self.tableView.rowHeight = 68.0
+    self.tableView.rowHeight = Constants.Layout.cellHeight
   }
   
   /*******************************************************************************/
@@ -115,7 +127,7 @@ extension PlaylistDetailViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    if indexPath.row > (tableView.numberOfRows(inSection: 0)-5) {
+    if indexPath.row > (tableView.numberOfRows(inSection: 0)-Constants.Values.loadNextDataCellCountLimit) {
       if self.tracksViewModel.canLoadMoreTracks() {
         self.tracksViewModel.fetchNextTracks()
       }
@@ -134,11 +146,9 @@ extension PlaylistDetailViewController: UIScrollViewDelegate {
     
     if animated {
       UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.5, delay: 0, options: [], animations: {
-        //self.fullHeaderView.alpha = collapsed ? 0.0 : 1.0
         self.collapsedHeaderView.alpha = !collapsed ? 0.0 : 1.0
       }, completion: nil)
     } else {
-      //self.fullHeaderView.alpha = collapsed ? 0.0 : 1.0
       self.collapsedHeaderView.alpha = !collapsed ? 0.0 : 1.0
     }
   }
