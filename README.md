@@ -53,3 +53,9 @@ To install new dependencies:
 To update dependencies:
 
     pod update
+
+## TODO
+
+1. Fix the warning concerning `Variable` deprecation and Rx
+2. Add transition animation between playlists scene and playlist detail scene
+3. Manage users
