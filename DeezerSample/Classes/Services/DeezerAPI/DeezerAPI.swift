@@ -42,12 +42,27 @@ class DeezerAPI {
   /*******************************************************************************/
   // MARK: - Utils
   
-  func constructRequest(method: NetworkerRequest.Method, path: String) -> NetworkerRequest {
+  func constructRequest(method: NetworkerRequest.Method, path: String, parameters: [String: Any] = [:], encoding: NetworkerRequest.ParameterEncoding? = nil) -> NetworkerRequest {
+    
+    let parametersEncoding: NetworkerRequest.ParameterEncoding
+    if let encoding = encoding {
+      parametersEncoding = encoding
+    } else {
+      switch(method) {
+      case .get:
+        parametersEncoding = .urlEncoded
+      default:
+        parametersEncoding = .json
+      }
+    }
+    
     return NetworkerRequest(
-      method: .get,
+      method: method,
       scheme: self.scheme,
       host: self.host,
-      path: path
+      path: path,
+      parameters: parameters,
+      encoding: parametersEncoding
     )
   }
 }

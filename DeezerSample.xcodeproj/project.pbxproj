@@ -20,6 +20,7 @@
 		DB54FD042107594A00FE2130 /* DeezerArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54FD032107594A00FE2130 /* DeezerArtistModel.swift */; };
 		DB54FD062107599C00FE2130 /* PaginationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54FD052107599C00FE2130 /* PaginationModel.swift */; };
 		DB54FD08210759B700FE2130 /* DeezerPaginationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54FD07210759B700FE2130 /* DeezerPaginationModel.swift */; };
+		DB54FD0A21075A6D00FE2130 /* DeezerAPI+Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54FD0921075A6D00FE2130 /* DeezerAPI+Track.swift */; };
 		DBF1C31C20E905FC003FAFE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C31B20E905FC003FAFE4 /* AppDelegate.swift */; };
 		DBF1C32320E905FD003FAFE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF1C32220E905FD003FAFE4 /* Assets.xcassets */; };
 		DBF1C32620E905FD003FAFE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF1C32420E905FD003FAFE4 /* LaunchScreen.storyboard */; };
@@ -88,6 +89,7 @@
 		DB54FD032107594A00FE2130 /* DeezerArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerArtistModel.swift; sourceTree = "<group>"; };
 		DB54FD052107599C00FE2130 /* PaginationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationModel.swift; sourceTree = "<group>"; };
 		DB54FD07210759B700FE2130 /* DeezerPaginationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerPaginationModel.swift; sourceTree = "<group>"; };
+		DB54FD0921075A6D00FE2130 /* DeezerAPI+Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeezerAPI+Track.swift"; sourceTree = "<group>"; };
 		DBF1C31820E905FC003FAFE4 /* DeezerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeezerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF1C31B20E905FC003FAFE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBF1C32020E905FC003FAFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 				DBF1C36520E90B97003FAFE4 /* Model */,
 				DBF1C36120E909C4003FAFE4 /* DeezerAPI.swift */,
 				DBF1C36820E90C4A003FAFE4 /* DeezerAPI+User.swift */,
+				DB54FD0921075A6D00FE2130 /* DeezerAPI+Track.swift */,
 			);
 			path = DeezerAPI;
 			sourceTree = "<group>";
@@ -703,6 +706,7 @@
 				DB54FD062107599C00FE2130 /* PaginationModel.swift in Sources */,
 				DB54FD022107592500FE2130 /* DeezerTrackModel.swift in Sources */,
 				DBF1C36920E90C4A003FAFE4 /* DeezerAPI+User.swift in Sources */,
+				DB54FD0A21075A6D00FE2130 /* DeezerAPI+Track.swift in Sources */,
 				DBF1C37220E90EEE003FAFE4 /* PlaylistsViewModel.swift in Sources */,
 				DBF1C37E20E92D41003FAFE4 /* ViewReusable.swift in Sources */,
 				DB54FD00210758F700FE2130 /* ArtistModel.swift in Sources */,

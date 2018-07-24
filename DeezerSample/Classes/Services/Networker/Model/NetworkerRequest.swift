@@ -22,6 +22,7 @@ struct NetworkerRequest {
   
   enum ParameterEncoding {
     case json
+    case urlEncoded
   }
   
   /*******************************************************************************/

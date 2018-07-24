@@ -24,6 +24,7 @@ extension NetworkerRequest.ParameterEncoding {
   var alamofire: Alamofire.ParameterEncoding {
     switch(self) {
     case .json: return JSONEncoding.default
+    case .urlEncoded: return URLEncoding.default
     }
   }
 }
