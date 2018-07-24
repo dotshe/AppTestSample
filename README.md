@@ -6,12 +6,12 @@
 
 ### Features
 
-Create a small app that will list Deezer user's playlists.
-The playlists will be presented in a grid (3 colums) displaying playlist cover and title.
-When you click on a playlist you will display it.
-Display a playlist consist of displaying a header in a collapsing toolbar, showing playlist cover, title, author, formatted duration
-For listing the tracks, you have to lazy loading - load on scroll down.
-Track list display the title - artist name and formatted duration
+[X] Create a small app that will list Deezer user's playlists.
+[X] The playlists will be presented in a grid (3 colums) displaying playlist cover and title.
+[X] When you click on a playlist you will display it.
+[X] Display a playlist consist of displaying a header in a collapsing toolbar, showing playlist cover, title, author, formatted duration
+[X] For listing the tracks, you have to lazy loading - load on scroll down.
+[X] Track list display the title - artist name and formatted duration
 
 ### Requirements
 
