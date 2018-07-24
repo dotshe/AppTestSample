@@ -8,6 +8,8 @@
 
 import UIKit
 
+let Router = RouterManager()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,16 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     
-    let playlistsViewModel: PlaylistsViewModel = PlaylistsViewModel(withUserIdentifier: 5)
-    let playlistsViewController: PlaylistsViewController = PlaylistsViewController()
-    playlistsViewController.playlistsViewModel = playlistsViewModel
-    
-    let navigationController = UINavigationController(rootViewController: playlistsViewController)
-    navigationController.setNavigationBarHidden(true, animated: false)
-    
     self.window = UIWindow(frame: UIScreen.main.bounds)
-    window?.rootViewController = navigationController
+    window?.rootViewController = UIViewController()
     window?.makeKeyAndVisible()
+    
+    Router.presentPlaylistsViewController(forUserIdentifier: 5)
     
     return true
   }
