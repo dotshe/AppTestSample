@@ -17,6 +17,8 @@ class PlaylistDetailViewController: UIViewController {
   // - UI
   @IBOutlet private weak var contentView: UIView!
   @IBOutlet private weak var tableView: UITableView!
+  @IBOutlet private var nextFooterTableView: UIView!
+  @IBOutlet private weak var nextLoadingView: LoadingView!
   private var fullHeaderView: PlaylistDetailFullHeaderView = PlaylistDetailFullHeaderView.loadFromNib()!
   private var collapsedHeaderView: PlaylistDetailCollapsedHeaderView = PlaylistDetailCollapsedHeaderView.loadFromNib()!
   
@@ -30,6 +32,7 @@ class PlaylistDetailViewController: UIViewController {
       viewModel.fetchPlaylistDetails()
     }
   }
+  let disposeBag = DisposeBag()
   
   /*******************************************************************************/
   // MARK: - View Life Cycle
@@ -37,6 +40,8 @@ class PlaylistDetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     prepare()
+    bindViewModel()
+    self.tracksViewModel.fetchTracks()
   }
   
   /*******************************************************************************/
@@ -75,6 +80,10 @@ class PlaylistDetailViewController: UIViewController {
    *
    */
   private func prepareTableView() {
+    let reuseIdentifier: String = TrackTableViewCell.reuseIdentifier
+    let cellNib: UINib? = TrackTableViewCell.nib
+    self.tableView.register(cellNib, forCellReuseIdentifier: reuseIdentifier)
+    self.tableView.rowHeight = 68.0
   }
   
   /*******************************************************************************/
@@ -91,16 +100,26 @@ class PlaylistDetailViewController: UIViewController {
 extension PlaylistDetailViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 0
+    return tracksViewModel.numberOfTracksViewModels()
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let reuseIdentifier = "Nothing"
+    let reuseIdentifier = TrackTableViewCell.reuseIdentifier
     let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+    
+    if let cell = cell as? TrackTableViewCell {
+      cell.trackViewModel = self.tracksViewModel.trackViewModel(atIndex: indexPath.row)
+    }
+    
     return cell
   }
   
   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    if indexPath.row > (tableView.numberOfRows(inSection: 0)-5) {
+      if self.tracksViewModel.canLoadMoreTracks() {
+        self.tracksViewModel.fetchNextTracks()
+      }
+    }
   }
 }
 
@@ -108,3 +127,59 @@ extension PlaylistDetailViewController: UITableViewDelegate {
   
 }
 
+extension PlaylistDetailViewController: UIScrollViewDelegate {
+  
+  private func updateHeader(animated: Bool = false) {
+    let collapsed: Bool = self.tableView.contentOffset.y > (self.fullHeaderView.frame.height - self.collapsedHeaderView.frame.height)
+    
+    if animated {
+      UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.5, delay: 0, options: [], animations: {
+        //self.fullHeaderView.alpha = collapsed ? 0.0 : 1.0
+        self.collapsedHeaderView.alpha = !collapsed ? 0.0 : 1.0
+      }, completion: nil)
+    } else {
+      //self.fullHeaderView.alpha = collapsed ? 0.0 : 1.0
+      self.collapsedHeaderView.alpha = !collapsed ? 0.0 : 1.0
+    }
+  }
+  
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    updateHeader(animated: true)
+  }
+  
+  
+}
+/*******************************************************************************/
+// MARK: -
+
+extension PlaylistDetailViewController {
+  
+  /**
+   *
+   */
+  private func bindViewModel() {
+    self.tracksViewModel.tracks
+      .asObservable()
+      .subscribe({ _ in
+        self.tableView.reloadData()
+      }).disposed(by: disposeBag)
+    self.tracksViewModel.nextLoading
+      .asObservable()
+      .subscribe({ _ in
+        if self.tracksViewModel.isLoadingNextTracks() {
+          self.tableView.tableFooterView = self.nextFooterTableView
+          self.nextLoadingView.startAnimating()
+        } else {
+          self.tableView.tableFooterView = nil
+          self.nextLoadingView.stopAnimating()
+        }
+      }).disposed(by: disposeBag)
+  }
+  
+  /**
+   *
+   */
+  private func unbindViewModel() {
+    
+  }
+}

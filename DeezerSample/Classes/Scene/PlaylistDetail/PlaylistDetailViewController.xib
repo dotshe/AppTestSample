@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaylistDetailViewController" customModule="DeezerSample" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="qTI-A6-8eB" id="Jtp-s9-45m"/>
+                <outlet property="nextFooterTableView" destination="qIq-Qo-MJT" id="aSX-q6-Jem"/>
+                <outlet property="nextLoadingView" destination="gbK-Uj-hIj" id="b2K-Yo-ct6"/>
                 <outlet property="tableView" destination="4Gx-Q1-yXt" id="H4g-i3-V9v"/>
                 <outlet property="view" destination="86D-7G-jM1" id="KvR-cO-lHa"/>
             </connections>
@@ -66,8 +68,55 @@
             <viewLayoutGuide key="safeArea" id="djS-PH-XmK"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
+        <view contentMode="scaleToFill" id="qIq-Qo-MJT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIh-d4-seQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbK-Uj-hIj" customClass="LoadingView" customModule="DeezerSample" customModuleProvider="target">
+                            <rect key="frame" x="171" y="8" width="32" height="32"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="0Nv-Z5-2pL"/>
+                                <constraint firstAttribute="height" constant="32" id="bFA-Jh-qFY"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="... chargement des pistes suivantes ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hv6-ZH-Atz">
+                            <rect key="frame" x="16" y="44" width="343" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="3A7-jT-z6Z"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="hv6-ZH-Atz" firstAttribute="leading" secondItem="pIh-d4-seQ" secondAttribute="leading" constant="16" id="0k7-GF-OFJ"/>
+                        <constraint firstItem="hv6-ZH-Atz" firstAttribute="top" secondItem="gbK-Uj-hIj" secondAttribute="bottom" constant="4" id="AWg-c2-uWC"/>
+                        <constraint firstAttribute="trailing" secondItem="hv6-ZH-Atz" secondAttribute="trailing" constant="16" id="AlR-k4-tcj"/>
+                        <constraint firstItem="gbK-Uj-hIj" firstAttribute="top" secondItem="pIh-d4-seQ" secondAttribute="top" constant="8" id="CcA-pa-wT1"/>
+                        <constraint firstAttribute="bottom" secondItem="hv6-ZH-Atz" secondAttribute="bottom" constant="4" id="UrZ-8G-nuN"/>
+                        <constraint firstItem="gbK-Uj-hIj" firstAttribute="centerX" secondItem="pIh-d4-seQ" secondAttribute="centerX" id="d1w-Jb-N0w"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Vpv-Us-7hi" firstAttribute="trailing" secondItem="pIh-d4-seQ" secondAttribute="trailing" id="cU5-iH-cAD"/>
+                <constraint firstItem="pIh-d4-seQ" firstAttribute="top" secondItem="Vpv-Us-7hi" secondAttribute="top" id="n2q-VA-e61"/>
+                <constraint firstAttribute="bottom" secondItem="pIh-d4-seQ" secondAttribute="bottom" id="r2l-3E-xB6"/>
+                <constraint firstItem="pIh-d4-seQ" firstAttribute="leading" secondItem="Vpv-Us-7hi" secondAttribute="leading" id="sbp-72-eYf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Vpv-Us-7hi"/>
+            <point key="canvasLocation" x="-394.5" y="-453"/>
+        </view>
     </objects>
     <resources>
-        <image name="ic_close_white_24pt" width="16" height="16"/>
+        <image name="ic_close_white_24pt" width="24" height="24"/>
     </resources>
 </document>

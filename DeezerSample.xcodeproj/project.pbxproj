@@ -31,6 +31,8 @@
 		DB54FD202107628A00FE2130 /* TracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54FD1F2107628A00FE2130 /* TracksViewModel.swift */; };
 		DB54FD222107629400FE2130 /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54FD212107629400FE2130 /* TrackViewModel.swift */; };
 		DB54FD24210762CC00FE2130 /* TrackRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54FD23210762CC00FE2130 /* TrackRepository.swift */; };
+		DB54FD262107641D00FE2130 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54FD252107641D00FE2130 /* TrackTableViewCell.swift */; };
+		DB54FD282107642400FE2130 /* TrackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB54FD272107642400FE2130 /* TrackTableViewCell.xib */; };
 		DBF1C31C20E905FC003FAFE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1C31B20E905FC003FAFE4 /* AppDelegate.swift */; };
 		DBF1C32320E905FD003FAFE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF1C32220E905FD003FAFE4 /* Assets.xcassets */; };
 		DBF1C32620E905FD003FAFE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF1C32420E905FD003FAFE4 /* LaunchScreen.storyboard */; };
@@ -110,6 +112,8 @@
 		DB54FD1F2107628A00FE2130 /* TracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewModel.swift; sourceTree = "<group>"; };
 		DB54FD212107629400FE2130 /* TrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewModel.swift; sourceTree = "<group>"; };
 		DB54FD23210762CC00FE2130 /* TrackRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRepository.swift; sourceTree = "<group>"; };
+		DB54FD252107641D00FE2130 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
+		DB54FD272107642400FE2130 /* TrackTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackTableViewCell.xib; sourceTree = "<group>"; };
 		DBF1C31820E905FC003FAFE4 /* DeezerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeezerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF1C31B20E905FC003FAFE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBF1C32020E905FC003FAFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -260,6 +264,8 @@
 		DB54FD1021075ECE00FE2130 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				DB54FD252107641D00FE2130 /* TrackTableViewCell.swift */,
+				DB54FD272107642400FE2130 /* TrackTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -638,6 +644,7 @@
 				DBF1C32320E905FD003FAFE4 /* Assets.xcassets in Resources */,
 				DBF1C38A20E93164003FAFE4 /* PlaylistDetailViewController.xib in Resources */,
 				DBF1C37A20E92CFB003FAFE4 /* PlaylistCollectionViewCell.xib in Resources */,
+				DB54FD282107642400FE2130 /* TrackTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,6 +805,7 @@
 				DB54FD1C2107612900FE2130 /* PlaylistDetailFullHeaderView.swift in Sources */,
 				DB54FD00210758F700FE2130 /* ArtistModel.swift in Sources */,
 				DBF1C35F20E908F5003FAFE4 /* NetworkerRequest+Alamofire.swift in Sources */,
+				DB54FD262107641D00FE2130 /* TrackTableViewCell.swift in Sources */,
 				DBF1C36720E90BB1003FAFE4 /* DeezerPlaylistModel.swift in Sources */,
 				DBF1C38220E92E0E003FAFE4 /* ImageView+Loading.swift in Sources */,
 				DBF1C37820E92CF3003FAFE4 /* PlaylistCollectionViewCell.swift in Sources */,
